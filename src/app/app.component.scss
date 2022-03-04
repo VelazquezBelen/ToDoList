@@ -1,0 +1,52 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.tasks {
+    width: 500px;
+}
+
+.add-task input, .add-task button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 2px;
+    margin-bottom: 2ex;
+}
+
+.add-task button {
+    margin-left: 5px;
+    background-color: white;
+    width: 85px;   
+}
+
+.add-task input {
+    width: 400px;  
+}
+
+.task-item {
+    list-style:none;
+    list-style-position: outside;
+    border: 2px solid black;
+    margin-top: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.task-item button {
+    background-color: white;
+    border: 0px;
+    font-size: 18px;
+    float: right;
+    margin-top: 7px;   
+}
+
+input[type="checkbox"] {
+
+}
+
