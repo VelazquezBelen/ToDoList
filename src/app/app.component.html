@@ -2,34 +2,16 @@
   <h1>LISTA DE TAREAS DE BELÉN</h1>
   <article class="tasks">
     <div class="add-task">
-      <input>
-      <button>ADD</button>
+      <input type="text" #taskName placeholder="Ingrese una tarea">
+      <button type="button" (click)="addTask(taskName.value)">ADD</button>
     </div>
-      <form>
-        <div class="task-item">      
-          <input type="checkbox"> Task
-          <button><i class="fa-regular fa-trash-can"></i></button>
+    <table>
+      <tr *ngFor="let task of tasks; let index = index;" [class.tachado]="task.done">
+        <div class="task-item">
+          <input type="checkbox" (change)="changeTaskState(index)"> {{task.name}} 
+          <button (click)="deleteTask(index)"><i class="fa-regular fa-trash-can"></i></button>
         </div>
-        <div class="task-item">      
-          <input type="checkbox"> Task N-2
-          <button><i class="fa-regular fa-trash-can"></i></button>
-        </div>
-        <div class="task-item">      
-          <input type="checkbox"> <del> Completed Task N-2</del>
-          <button><i class="fa-regular fa-trash-can"></i></button>
-        </div>
-        <div class="task-item">      
-          <input type="checkbox"> Task k
-          <button><i class="fa-regular fa-trash-can"></i></button>
-        </div>
-        <div class="task-item">      
-          <input type="checkbox"> Task 2
-          <button><i class="fa-regular fa-trash-can"></i></button>
-        </div>
-        <div class="task-item">      
-          <input type="checkbox"> <del> Completed Task 1</del>
-          <button><i class="fa-regular fa-trash-can"></i></button>
-        </div>
-      </form>
+      </tr>
+    </table>
   </article>
 </section>
