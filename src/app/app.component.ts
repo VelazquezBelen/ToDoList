@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto1';
+  name = 'BELÉN';
   tasks = new Array();
 
   addTask(taskName: string) {
-    this.tasks.unshift({"name": taskName, "done": false});
+    this.tasks.unshift({"taskName": taskName, "done": false});
   }
 
   changeTaskState(index: number) {
