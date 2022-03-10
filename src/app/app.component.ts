@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from 'src/data/Task';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'proyecto1';
   name = 'BELÉN';
-  tasks = new Array();
+  tasks: Task[] = [];
 
   addTask(taskName: string) {
-    this.tasks.unshift({"taskName": taskName, "done": false});
+    this.tasks.unshift({"name": taskName, "done": false});
   }
 
   changeTaskState(index: number) {
