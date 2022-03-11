@@ -1,0 +1,7 @@
+<li>
+    <article>
+        <input type="checkbox" (click)="changeTaskState(task.id)" > 
+        {{task.name}}
+    </article>    
+    <button (click)="deleteTask(task.id)"><i class="fa-regular fa-trash-can"></i></button>
+</li>

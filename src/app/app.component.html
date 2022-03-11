@@ -1,17 +1,4 @@
 <section>
   <h1>LISTA DE TAREAS DE {{name}}</h1>
-  <article class="tasks">
-    <div class="add-task">
-      <input type="text" #taskName placeholder="Ingrese una tarea">
-      <button type="button" (click)="addTask(taskName.value)">ADD</button>
-    </div>
-    <table>
-      <tr *ngFor="let task of tasks; let index = index;" [class.complete]="task.done">
-        <div class="task-item">
-          <td style="width:100%;"><input type="checkbox" (change)="changeTaskState(index)"> {{task.name}} </td>
-          <td><button (click)="deleteTask(index)"><i class="fa-regular fa-trash-can"></i></button></td>
-        </div>
-      </tr>
-    </table>
-  </article>
+  <app-home></app-home>
 </section>

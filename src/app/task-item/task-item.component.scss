@@ -1,0 +1,28 @@
+li {
+    border: 2px solid black;
+    margin-top: 0.7rem;
+    padding-top: 0.6rem; 
+    padding-bottom: 0.6rem; 
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    article {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+        input[type="checkbox"] {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    button {
+        background-color: white;
+        border: 0;
+        font-size: 1.2rem;
+    }  
+}
