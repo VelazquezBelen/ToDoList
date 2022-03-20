@@ -1,7 +1,18 @@
 <li>
+    <!-- <article>
+        <label class="checkbox">
+            <input type="checkbox" (click)="changeTaskState(task.id)" > 
+            <span>{{task.name}}</span>     
+        </label>        
+    </article> -->
     <article>
-        <input type="checkbox" (click)="changeTaskState(task.id)" > 
-        {{task.name}}
-    </article>    
-    <button (click)="deleteTask(task.id)"><i class="fa-regular fa-trash-can"></i></button>
+        <input type="checkbox" (click)="changeTaskState(task.id)">
+        <span>{{task.name}}</span>   
+    </article>
+    <div class="buttons">
+        <button><i class="fa-regular fa-clipboard"></i></button>
+        <button><i class="fa-solid fa-share"></i></button>    
+        <button (click)="deleteTask(task.id)"><i class="fa-regular fa-trash-can"></i></button>
+    </div>
+    
 </li>

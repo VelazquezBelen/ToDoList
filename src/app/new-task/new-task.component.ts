@@ -13,7 +13,8 @@ export class NewTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTask(newTask: string) {
+  addTask(newTask: string, event: Event) {
+    event.preventDefault();
     this.newTask.emit(newTask);
   }
 }

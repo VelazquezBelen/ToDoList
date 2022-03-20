@@ -8,7 +8,7 @@ import { Task } from 'src/data/Task';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  tasks: Task[] = [];
+  tasks: Task[] = [{id: 0, name:"t1", "done": false}];
 
   constructor() { }
 
@@ -16,19 +16,19 @@ export class HomeComponent implements OnInit {
   }
 
   addTask(taskName: string) {
-    this.tasks.unshift({"id": this.tasks.length, "name": taskName, "done": false});
+    if(taskName != "")
+      this.tasks.unshift({"id": this.tasks.length, "name": taskName, "done": false});
   }
 
   changeTaskState(taskId: number) {
     let index = this.tasks.findIndex(item => item.id === taskId);
-    if (this.tasks[index].done == false) 
-      this.tasks[index].done = true;
-    else
-      this.tasks[index].done = false;
+    if (index > -1)
+      this.tasks[index].done = !this.tasks[index].done;
   }
 
   deleteTask(taskId: number) {
     let index = this.tasks.findIndex(item => item.id === taskId);
-    this.tasks.splice(index, 1);  
+    if (index > -1)
+      this.tasks.splice(index, 1);  
   }
 }
