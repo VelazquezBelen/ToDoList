@@ -1,6 +1,5 @@
 form#newTask {
     max-width: 60rem;
-    width: 90vw;
     height: 4rem;
     box-sizing: border-box;
     border-radius: 4px;
@@ -11,6 +10,7 @@ form#newTask {
     margin-bottom: 1rem;
     position: sticky;
     top: 30px;
+    z-index: 2;
     
     input, button {
         outline: none;
@@ -22,12 +22,16 @@ form#newTask {
     }
     input {
         background-color: rgba(34,34,34,0.1);
+        color: black;
         border: none;
-        padding: 0 6rem 0 16px;
+        padding: 0 6rem 0 8px;
         height: 4rem;
         width: 100%;
         backdrop-filter: blur(0.5rem);
-        //transition: 0.3s all;
+
+        &::placeholder {
+            color: black;
+        }
 
         &:hover, &:active, &:focus{
             background-color: rgba(34,34,34,0.2);
@@ -37,12 +41,12 @@ form#newTask {
         background-color: transparent;
         box-sizing: border-box;
         padding: 0;
-        height: 3rem;
-        width: 3rem;
+        width: 48px;
         position: absolute;
         right: 0.5rem;
-        cursor: pointer;        
-        //transition: 0.3s all;
+        padding: 8px 8px 8px 8px;
+        cursor: pointer;
+        font-size: 24px;        
 
         &:hover, &:active, &:focus{
             background-color: rgba(34,34,34,0.2);

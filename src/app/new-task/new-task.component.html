@@ -1,7 +1,3 @@
-<!-- <div id="newTask">
-    <input type="text" #taskName placeholder="Ingrese una tarea" (keydown.enter)="addTask(taskName.value, $event); taskName.value=''">
-    <button type="button" (click)="addTask(taskName.value, $event); taskName.value=''"><i class="fa-solid fa-check"></i></button>
-</div> -->
 <form id="newTask">
     <input type="text" #taskName placeholder="Ingrese una tarea" (keydown.enter)="addTask(taskName.value, $event); taskName.value=''">
     <button (click)="addTask(taskName.value, $event); taskName.value=''"><i class="mdi mdi-check-bold"></i></button>

@@ -8,7 +8,7 @@ import { Task } from 'src/data/Task';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  tasks: Task[] = [{id: 0, name:"t1", "done": false}];
+  tasks: Task[] = [];
 
   constructor() { }
 
